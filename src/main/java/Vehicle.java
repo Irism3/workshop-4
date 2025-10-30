@@ -1,12 +1,14 @@
 public class Vehicle {
-    int vin;
-    int year;
-    String make;
-    String model;
-    String vehicleType;
-    String color;
-    int odometer;
-    double price;
+    //will hold information about a specific vehicle
+
+    private int vin;
+    private int year;
+    private String make;
+    private String model;
+    private  String vehicleType;
+    private String color;
+    private  int odometer;
+    private double price;
 
     public Vehicle(int vin, int year, String make, String model, String vehicleType,
                    String color, int odometer, double price) {
@@ -83,6 +85,19 @@ public class Vehicle {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "vin" + vin +
+                ", year" + year +
+                ", make" + make + '|' +
+                ", model" + model + '|' +
+                ", vehicleType" + vehicleType + '|' +
+                ", color" + color + '|' +
+                ", odometer" + odometer +
+                ", price" + price ;
+    }
+
 }
 
 
