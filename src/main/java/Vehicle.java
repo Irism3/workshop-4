@@ -88,13 +88,13 @@ public class Vehicle {
 
     @Override
     public String toString() {
-        return "vin" + vin +
+        return "vin" + vin + "|" +
                 ", year" + year +
-                ", make" + make + '|' +
-                ", model" + model + '|' +
-                ", vehicleType" + vehicleType + '|' +
-                ", color" + color + '|' +
-                ", odometer" + odometer +
+                ", make" + make + "|" +
+                ", model" + model + "|" +
+                ", vehicleType" + vehicleType + "|" +
+                ", color" + color + "|" +
+                ", odometer" + odometer +"|"+
                 ", price" + price ;
     }
 
