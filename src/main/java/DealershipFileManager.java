@@ -5,12 +5,12 @@ public class DealershipFileManager {
 
     public Dealership getDealership() {
         String fileName = "src/main/resources/inventory.csv";
+        Dealership dealership = null;
 
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
-
             String line = reader.readLine();
             String[] lineParts = line.split("\\|");
-            Dealership dealership = new Dealership(lineParts[0], lineParts[1], lineParts[2]);
+            dealership = new Dealership(lineParts[0], lineParts[1], lineParts[2]);
 
             do {
                 line = reader.readLine();
@@ -26,6 +26,8 @@ public class DealershipFileManager {
                 String color = lineParts[5];
                 int odometer = Integer.parseInt(lineParts[6]);
                 double price = Double.parseDouble(lineParts[7]);
+                Vehicle v = new Vehicle();
+                dealership.addVehicle(v);
 
 
             } while (true);
@@ -35,14 +37,11 @@ public class DealershipFileManager {
         } catch (IOException e) {
             System.out.println("error" + e);
         }
-        return null;
+        return dealership;
 
-    try ( BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))){
 
-        catch (IOException e) {
-        System.out.println("Error" + e);
     }
+    public void saveDealership(Dealership dealership) {
 
-
-
+    }
 }
